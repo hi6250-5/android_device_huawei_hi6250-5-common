@@ -45,7 +45,7 @@ on boot
 service macaddr /vendor/bin/mac_addr_normalization
     class core
     user root
-    group root bluetooth net_bt_stack wifi
+    group root bluetooth wifi
     oneshot
 
 service wifi_wakeup_src /vendor/bin/wifiwakeupsrc

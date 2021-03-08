@@ -45,7 +45,7 @@ service hisi_bfg /vendor/bin/start_connectivity_hisi
 service macaddr /vendor/bin/mac_addr_normalization
     class late_start
     user root
-    group root bluetooth net_bt_stack wifi
+    group root bluetooth wifi
     oneshot
 
 on property:setup_hi110x_modules=success && property:ro.product.locale.region=CN
@@ -119,9 +119,9 @@ service watchlssd /vendor/xbin/gnss_watchlssd_thirdparty
 
 on property:bluetooth.log.file.create=true
    mkdir /data/log/bt
-   chown bluetooth net_bt_stack /data/log/bt
+   chown bluetooth bluetooth /data/log/bt
    chmod 775 /data/log/bt
 
    setprop bluetooth.log.file.create false
 
-   chown bluetooth net_bt_stack /dev/hwbt
+   chown bluetooth bluetooth /dev/hwbt

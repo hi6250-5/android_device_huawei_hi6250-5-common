@@ -43,7 +43,8 @@ vendor/lib64/libcamera_metadata.so
 # Connectivity
 vendor/bin/oam_hisi
 vendor/bin/octty
-vendor/bin/start_connectivity_hisi
+# net_bt_stack -> bluetooth
+vendor/bin/start_connectivity_hisi|6983c172029fec22ead6c5d0fb0fdacdf5f72998
 vendor/lib/libc_sec_hisi_connectivity.so
 vendor/lib/libchrlog.so
 vendor/lib/libpf_customize_hisi.so
