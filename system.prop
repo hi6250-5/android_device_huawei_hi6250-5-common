@@ -45,5 +45,8 @@ persist.media.offload.enable=true
 # Misc
 keyguard.no_require_sim=true
 
+# NFC
+ro.hardware.nfc_nci=nqx.default
+
 # SDcard
 persist.fw.force_adoptable=true
