@@ -245,6 +245,7 @@ on early-boot
 
 on boot
     setprop sys.usb.configfs 1
+    setprop sys.usb.controller hisi-usb-otg
 
 on post-fs-data
     mkdir /data/nfc
