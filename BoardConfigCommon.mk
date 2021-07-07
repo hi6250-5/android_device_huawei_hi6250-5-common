@@ -33,6 +33,9 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Graphics
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 
+# HIDL
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest.xml
+
 # Kernel
 BOARD_KERNEL_BASE := 0x00478000
 BOARD_KERNEL_CMDLINE := loglevel=4 coherent_pool=512K page_tracker=on slub_min_objects=12 unmovable_isolate1=2:192M,3:224M,4:256M androidboot.selinux=enforcing
