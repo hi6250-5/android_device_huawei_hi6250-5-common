@@ -1,4 +1,19 @@
+import /init.audio.rc
 import /init.balong_modem.rc
+import /init.charger.rc
+import /init.chip.charger.rc
+import /init.connectivity.bcm43455.rc
+import /init.connectivity.gps.rc
+import /init.connectivity.hisi.rc
+import /init.connectivity.rc
+import /init.device.rc
+import /init.extmodem.rc
+import /init.hisi.rc
+import /init.hisi.usb.rc
+import /init.manufacture.rc
+import /init.platform.rc
+import /init.post-fs-data.rc
+import /init.protocol.rc
 import /init.tee.rc
 
 on early-boot
