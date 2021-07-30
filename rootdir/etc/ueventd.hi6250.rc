@@ -60,3 +60,4 @@
 /dev/block/mmcblk0p45				0660	system	system
 
 /dev/tas2560					0660	root	audio
+/dev/pn544					0664	nfc	nfc
