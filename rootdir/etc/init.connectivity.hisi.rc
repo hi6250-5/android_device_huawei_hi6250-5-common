@@ -4,10 +4,9 @@
 on early-init
     setprop wifi.interface wlan0
     setprop is_hisi_connectivity_chip 1
-	setprop ro.hardware.consumerir "hisi.hi6250"
+    setprop ro.hardware.consumerir "hisi.hi6250"
 
 on post-fs-data
-    chmod 0660 /data/misc/wifi/wpa_supplicant.conf
     chmod 660 /dev/ttyAMA3
     chown system system /dev/ttyAMA3
 

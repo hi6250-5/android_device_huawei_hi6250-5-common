@@ -28,12 +28,12 @@ on boot
     chmod 0774 /sys/class/rfkill/rfkill0/state
 
 
-     chown bluetooth bluetooth /proc/bluetooth/sleep/proto
-     chmod 664 /proc/bluetooth/sleep/proto
-     chown bluetooth bluetooth /proc/bluetooth/sleep/btwrite
-     chmod 664 /proc/bluetooth/sleep/btwrite
-     chown bluetooth bluetooth /proc/bluetooth/sleep/btwake
-     chmod 664 /proc/bluetooth/sleep/btwake
+    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
+    chmod 664 /proc/bluetooth/sleep/proto
+    chown bluetooth bluetooth /proc/bluetooth/sleep/btwrite
+    chmod 664 /proc/bluetooth/sleep/btwrite
+    chown bluetooth bluetooth /proc/bluetooth/sleep/btwake
+    chmod 664 /proc/bluetooth/sleep/btwake
 
     setprop wifi.interface wlan0
 
