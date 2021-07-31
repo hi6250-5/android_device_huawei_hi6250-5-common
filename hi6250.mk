@@ -193,7 +193,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_audio \
     libshim_icu \
-    libshim_log
+    libshim_log \
+    libshim_ui
 
 # Thermal
 PRODUCT_PACKAGES += \

@@ -26,3 +26,10 @@ LOCAL_SHARED_LIBRARIES := liblog
 LOCAL_MODULE := libshim_log
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := GraphicBuffer.cpp
+LOCAL_SHARED_LIBRARIES := libui libgui libutils libcutils
+LOCAL_MODULE := libshim_ui
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_SHARED_LIBRARY)
