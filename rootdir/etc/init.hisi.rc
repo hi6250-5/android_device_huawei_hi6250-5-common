@@ -139,7 +139,7 @@ on data_not_ready
 
 
 
-service ril-daemon /system/bin/rild
+service ril-daemon /vendor/bin/hw/rild
     disabled
     class core
     socket rild stream 660 root radio
@@ -154,7 +154,7 @@ service ril-daemon /system/bin/rild
     user root
     group radio cache inet misc audio sdcard_r sdcard_rw log readproc system
 
-service ril-daemon1 /system/bin/rild -c 1
+service ril-daemon1 /vendor/bin/hw/rild -c 1
     disabled
     class core
     socket rilds2 stream 660 root radio
