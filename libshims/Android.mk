@@ -33,3 +33,11 @@ LOCAL_SHARED_LIBRARIES := libui libgui libutils libcutils
 LOCAL_MODULE := libshim_ui
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := SensorManager.cpp ISensorServer.cpp
+LOCAL_SHARED_LIBRARIES := liblog libcutils libgui libbinder libutils libsensor libui libnativeloader libEGL libGLESv2 libsync libbase
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
+LOCAL_MODULE := libshim_sensors
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_SHARED_LIBRARY)
