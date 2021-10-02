@@ -53,3 +53,4 @@ persist.sys.recovery_update=true
 
 # SDcard
 persist.fw.force_adoptable=true
+ro.sys.sdcardfs=false
