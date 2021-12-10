@@ -6,3 +6,7 @@
 
 ## Common Path
 COMMON_PATH := device/huawei/hi6250-5-common
+
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.hi6250.rc
