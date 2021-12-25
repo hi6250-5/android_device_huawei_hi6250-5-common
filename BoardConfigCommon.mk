@@ -82,7 +82,9 @@ TARGET_LD_SHIM_LIBS := \
     /vendor/lib/hw/audio.primary.hi6250.so|libshim_audio.so \
     /vendor/lib/hw/audio.primary.hi6250.so|libshim_icu.so \
     /vendor/lib/soundfx/libhuaweiprocessing.so|libshim_audio.so \
-    /vendor/lib/soundfx/libhuaweiprocessing.so|libshim_icu.so
+    /vendor/lib/soundfx/libhuaweiprocessing.so|libshim_icu.so \
+    /vendor/lib/libimonitor.so|libshim_log.so
+    /vendor/lib64/libimonitor.so|libshim_log.so
 
 # Vendor
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
