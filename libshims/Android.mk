@@ -41,3 +41,10 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 LOCAL_MODULE := libshim_sensors
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := memtrack_shim.cpp
+LOCAL_SHARED_LIBRARIES := libhardware libmemtrack liblog
+LOCAL_MODULE := libshim_memtrack
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_SHARED_LIBRARY)

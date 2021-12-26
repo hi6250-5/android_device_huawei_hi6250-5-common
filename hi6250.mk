@@ -207,6 +207,7 @@ PRODUCT_PACKAGES += \
     libshim_audio \
     libshim_icu \
     libshim_log \
+    libshim_memtrack \
     libshim_sensors \
     libshim_ui
 
