@@ -251,8 +251,10 @@ vendor/lib64/libstagefrighthw.so
 lib/libperfhub_client.so:vendor/lib/libperfhub_client.so
 lib64/libperfhub_client.so:vendor/lib64/libperfhub_client.so
 vendor/bin/perfhub
+vendor/lib/libhwuibp.so
 vendor/lib/libperfhub.so
 vendor/lib/libperfhub_service.so
+vendor/lib64/libhwuibp.so
 vendor/lib64/libperfhub.so
 vendor/lib64/libperfhub_service.so
 
