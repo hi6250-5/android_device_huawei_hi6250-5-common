@@ -201,7 +201,7 @@ vendor/lib/libc_secshared.so
 vendor/lib/libhilog.so
 vendor/lib/libhivwservice.so
 vendor/lib/libhwlog.so
-vendor/lib/libimonitor.so
+vendor/lib/libimonitor.so|6c62f1ee1e2b9c670658d99f9916b625c27fb49e
 vendor/lib/libnvme.so
 vendor/lib/liboeminfo.so
 vendor/lib64/libc_sec_hisi.so
@@ -209,7 +209,7 @@ vendor/lib64/libc_secshared.so
 vendor/lib64/libhilog.so
 vendor/lib64/libhivwservice.so
 vendor/lib64/libhwlog.so
-vendor/lib64/libimonitor.so
+vendor/lib64/libimonitor.so|aef98f8fd6542bf442f4a55d43ce2c0ee13ce356
 vendor/lib64/libnvme.so
 vendor/lib64/liboeminfo.so
 
