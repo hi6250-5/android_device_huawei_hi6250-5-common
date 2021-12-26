@@ -208,6 +208,7 @@ PRODUCT_PACKAGES += \
     libshim_icu \
     libshim_log \
     libshim_memtrack \
+    libshim_renderer \
     libshim_sensors \
     libshim_ui
 

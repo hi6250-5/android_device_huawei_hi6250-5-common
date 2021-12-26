@@ -48,3 +48,11 @@ LOCAL_SHARED_LIBRARIES := libhardware libmemtrack liblog
 LOCAL_MODULE := libshim_memtrack
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := renderer_shim.cpp
+LOCAL_C_INCLUDES := external/skia/src/core external/skia/include/private
+LOCAL_SHARED_LIBRARIES := libutils libhwui libskia libui libandroidfw
+LOCAL_MODULE := libshim_renderer
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_SHARED_LIBRARY)
