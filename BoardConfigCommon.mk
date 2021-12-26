@@ -32,6 +32,9 @@ TARGET_BOOTLOADER_BOARD_NAME := hi6250
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
+# Charger
+BACKLIGHT_PATH := /sys/class/leds/lcd_backlight0/brightness
+
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 
