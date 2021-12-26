@@ -48,5 +48,8 @@ keyguard.no_require_sim=true
 # NFC
 ro.hardware.nfc_nci=nqx.default
 
+# Recovery
+persist.sys.recovery_update=true
+
 # SDcard
 persist.fw.force_adoptable=true
