@@ -1,7 +1,5 @@
 import /init.audio.rc
 import /init.balong_modem.rc
-import /init.charger.rc
-import /init.chip.charger.rc
 import /init.connectivity.bcm43455.rc
 import /init.connectivity.gps.rc
 import /init.connectivity.hisi.rc
@@ -216,12 +214,10 @@ on charger
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
     restorecon_recursive /sys/devices/system/cpu/cpu0/cpufreq/interactive
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 807000
-    chown system  system /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse
     chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse
     chown system system /sys/class/android_usb/android0/switch_request
     chmod 0664 /sys/class/android_usb/android0/switch_request
-    start hw_ueventd
-    start oeminfo_nvm
 
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor powersave
     write /sys/kernel/set_hmp_thresholds/enable 0
@@ -235,6 +231,16 @@ on charger
     write /sys/class/devfreq/ddrfreq_latency/max_freq 0
     write /sys/class/devfreq/ddrfreq_up_threshold/max_freq 933000000
     write /sys/class/devfreq/ddrfreq_up_threshold/min_freq 933000000
+
+    chmod 664 /sys/class/leds/lcd_backlight0/brightness
+    chown system system /sys/class/leds/lcd_backlight0/brightness
+
+    class_start charger
+
+service charger /charger
+    class charger
+    critical
+    seclabel u:r:charger:s0
 
 on fs
     export ANDROID_STORAGE ""
