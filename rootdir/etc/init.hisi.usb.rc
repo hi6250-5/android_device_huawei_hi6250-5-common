@@ -53,7 +53,7 @@ on boot
     chown system system /sys/devices/platform/ff100000.hisi_usb/plugusb
     chmod 0660 /sys/devices/platform/ff100000.hisi_usb/plugusb
 
-on property:persist.sys.usb.config=none && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=none
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     setprop sys.usb.ffs.ready 0
@@ -63,20 +63,20 @@ on property:persist.sys.usb.config=none && property:sys.usb.configfs=1
     write /sys/devices/virtual/android_usb/android0/port_mode 1
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "adb"
     write /config/usb_gadget/g1/idVendor 0x12d1
     write /config/usb_gadget/g1/idProduct 0x103A
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=adb
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f1
     write /sys/devices/virtual/android_usb/android0/port_mode 2
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=mtp && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=mtp
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp"
@@ -87,21 +87,21 @@ on property:persist.sys.usb.config=mtp && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=mtp,adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=mtp,adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mtp_adb"
     write /config/usb_gadget/g1/idVendor 0x12d1
     write /config/usb_gadget/g1/idProduct 0x107e
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=mtp,adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=mtp,adb
     symlink /config/usb_gadget/g1/functions/mtp.gs0 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
     write /sys/devices/virtual/android_usb/android0/port_mode 4
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=ptp && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=ptp
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp"
@@ -114,14 +114,14 @@ on property:persist.sys.usb.config=ptp && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=ptp,adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=ptp,adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "ptp_adb"
     write /config/usb_gadget/g1/idVendor 0x12d1
     write /config/usb_gadget/g1/idProduct 0x107e
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=ptp,adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=ptp,adb
     write /config/usb_gadget/g1/functions/mass_storage.gs6/lun.0/file ${ro.cust.cdrom}
     symlink /config/usb_gadget/g1/functions/ptp.gs1 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/mass_storage.gs6 /config/usb_gadget/g1/configs/b.1/f2
@@ -130,7 +130,7 @@ on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=ptp,adb && pr
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=manufacture && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=manufacture
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "manufacture"
@@ -146,14 +146,14 @@ on property:persist.sys.usb.config=manufacture && property:sys.usb.configfs=1
     setprop sys.usb.start_atdiag 1
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=manufacture,adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=manufacture,adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "manufacture_adb"
     write /config/usb_gadget/g1/idVendor 0x12d1
     write /config/usb_gadget/g1/idProduct 0x107e
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=manufacture,adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=manufacture,adb
     symlink /config/usb_gadget/g1/functions/hw_acm.hw_acm_modem /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/hw_acm.hw_acm_PCUI /config/usb_gadget/g1/configs/b.1/f2
     symlink /config/usb_gadget/g1/functions/hw_acm.hw_acm_DIAG /config/usb_gadget/g1/configs/b.1/f3
@@ -165,7 +165,7 @@ on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=manufacture,a
     setprop sys.usb.start_atdiag 1
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=accessory && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=accessory
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "accessory"
@@ -176,21 +176,21 @@ on property:persist.sys.usb.config=accessory && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=accessory,adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=accessory,adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "accessory_adb"
     write /config/usb_gadget/g1/idVendor 0x18d1
     write /config/usb_gadget/g1/idProduct 0x2d01
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=accessory,adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=accessory,adb
     symlink /config/usb_gadget/g1/functions/accessory.gs2 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
     write /sys/devices/virtual/android_usb/android0/port_mode 12
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=audio_source && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=audio_source
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "audiosource"
@@ -201,21 +201,21 @@ on property:persist.sys.usb.config=audio_source && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=audio_source,adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=audio_source,adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "audiosource_adb"
     write /config/usb_gadget/g1/idVendor 0x18d1
     write /config/usb_gadget/g1/idProduct 0x2d03
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=audio_source,adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=audio_source,adb
     symlink /config/usb_gadget/g1/functions/audio_source.gs3 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
     write /sys/devices/virtual/android_usb/android0/port_mode 22
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=accessory,audio_source && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=accessory,audio_source
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "accessory_audiosource"
@@ -227,14 +227,14 @@ on property:persist.sys.usb.config=accessory,audio_source && property:sys.usb.co
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=accessory,audio_source,adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=accessory,audio_source,adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "accessory_audiosource_adb"
     write /config/usb_gadget/g1/idVendor 0x18d1
     write /config/usb_gadget/g1/idProduct 0x2d05
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=accessory,audio_source,adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=accessory,audio_source,adb
     symlink /config/usb_gadget/g1/functions/accessory.gs2 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/audio_source.gs3 /config/usb_gadget/g1/configs/b.1/f2
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f3
@@ -242,7 +242,7 @@ on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=accessory,aud
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=midi && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=midi
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "midi"
@@ -252,20 +252,20 @@ on property:persist.sys.usb.config=midi && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=midi,adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=midi,adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "midi_adb"
     write /config/usb_gadget/g1/idVendor 0x18d1
     write /config/usb_gadget/g1/idProduct 0x4ee9
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=midi,adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=midi,adb
     symlink /config/usb_gadget/g1/functions/midi.gs5 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=rndis && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=rndis
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis"
@@ -278,14 +278,14 @@ on property:persist.sys.usb.config=rndis && property:sys.usb.configfs=1
     write /sys/class/net/rndis0/queues/rx-0/rps_cpus f
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=rndis,adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=rndis,adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_adb"
     write /config/usb_gadget/g1/idVendor 0x12d1
     write /config/usb_gadget/g1/idProduct 0x108a
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=rndis,adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=rndis,adb
     write /sys/class/android_usb/android0/f_rndis/wceis  1
     symlink /config/usb_gadget/g1/functions/rndis.gs4 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
@@ -294,7 +294,7 @@ on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=rndis,adb && 
     write /sys/class/net/rndis0/queues/rx-0/rps_cpus f
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=mass_storage && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=mass_storage
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mass_storage"
@@ -306,14 +306,14 @@ on property:persist.sys.usb.config=mass_storage && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=mass_storage,adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=mass_storage,adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "mass_storage_adb"
     write /config/usb_gadget/g1/idVendor 0x12d1
     write /config/usb_gadget/g1/idProduct 0x107e
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=mass_storage,adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=mass_storage,adb
     write /config/usb_gadget/g1/functions/mass_storage.gs6/lun.0/file none
     symlink /config/usb_gadget/g1/functions/mass_storage.gs6 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/ffs.adb /config/usb_gadget/g1/configs/b.1/f2
@@ -321,7 +321,7 @@ on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=mass_storage,
     write /config/usb_gadget/g1/UDC ${sys.usb.controller}
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=rndis,serial && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=rndis,serial
     write /config/usb_gadget/g1/UDC "none"
     stop adbd
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_serial"
@@ -339,14 +339,14 @@ on property:persist.sys.usb.config=rndis,serial && property:sys.usb.configfs=1
     write /sys/class/net/rndis0/queues/rx-0/rps_cpus f
     setprop sys.usb.state ${sys.usb.config}
 
-on property:persist.sys.usb.config=rndis,serial,adb && property:sys.usb.configfs=1
+on property:persist.sys.usb.config=rndis,serial,adb
     write /config/usb_gadget/g1/UDC "none"
     write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "rndis_serial_adb"
     write /config/usb_gadget/g1/idVendor 0x12d1
     write /config/usb_gadget/g1/idProduct 0x107e
     start adbd
 
-on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=rndis,serial,adb && property:sys.usb.configfs=1
+on property:sys.usb.ffs.ready=1 && property:persist.sys.usb.config=rndis,serial,adb
     write /sys/class/android_usb/android0/f_rndis/wceis  1
     symlink /config/usb_gadget/g1/functions/rndis.gs4 /config/usb_gadget/g1/configs/b.1/f1
     symlink /config/usb_gadget/g1/functions/hw_acm.hw_acm_modem /config/usb_gadget/g1/configs/b.1/f2
