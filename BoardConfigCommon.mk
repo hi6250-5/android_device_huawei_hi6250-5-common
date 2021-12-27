@@ -34,6 +34,7 @@ TARGET_NO_RADIOIMAGE := true
 
 # Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd_backlight0/brightness
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.hi6250
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
