@@ -9,14 +9,14 @@ service teecd /vendor/bin/teecd
     class core
     user root
     group root readproc
-    seclabel u:r:tee:s0
+#    seclabel u:r:tee:s0
 
 service teelogcat /vendor/bin/tlogcat -f
 class late_start
 user root
 group system
 disabled
-seclabel u:r:hisilogcat:s0
+#seclabel u:r:hisilogcat:s0
 
 on property:persist.sys.huawei.debug.on=1
 start teelogcat

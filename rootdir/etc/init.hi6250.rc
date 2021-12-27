@@ -594,7 +594,7 @@ service kmsgcat_cp /sbin/kmsgcat -r 4096 -n 25 -i /dev/cshell_log -f /data/log/c
     user root
     group system
     disabled
-    seclabel u:r:hisilogcat:s0
+#    seclabel u:r:hisilogcat:s0
 
 service defragd /system/vendor/bin/defragd
     class late_start
@@ -673,7 +673,7 @@ chmod 0660 /dev/voice_proxy_vowifi
 service check_system /sbin/hw_crit_service_sys
     class main
     oneshot
-    seclabel u:r:check_system:s0
+#    seclabel u:r:check_system:s0
 
 on property:sys.boot_completed=1
     start check_system

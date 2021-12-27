@@ -78,7 +78,7 @@ service oeminfo_nvm /sbin/oeminfo_nvm_server
     class core
     critical
     ioprio rt 4
-    seclabel u:r:oeminfo_nvm:s0
+#    seclabel u:r:oeminfo_nvm:s0
 
 service diagserver /vendor/bin/diagserver
     class main
@@ -96,7 +96,7 @@ service goldeneye /system/bin/goldeneye
 service check_root /sbin/check_root
     class main
     oneshot
-    seclabel u:r:check_root:s0
+#    seclabel u:r:check_root:s0
 
 
 on property:sys.boot_completed=1
@@ -116,9 +116,9 @@ service hwnffserver  /vendor/bin/hwnffserver
 service data_cleanner /vendor/bin/data_cleaner
     user root
     group system log
-    seclabel u:r:fmdserver:s0
+#    seclabel u:r:fmdserver:s0
 
 service check_hota /system/bin/sh /system/etc/check_hota.sh
     class core
     oneshot
-    seclabel u:r:check_hota:s0
+#    seclabel u:r:check_hota:s0
