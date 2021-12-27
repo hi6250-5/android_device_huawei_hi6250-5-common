@@ -198,6 +198,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.hi6250.rc
 
+# RIL
+$(call project-set-path-variant,ril,TARGET_RIL_VARIANT,hardware/ril-dummy)
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
