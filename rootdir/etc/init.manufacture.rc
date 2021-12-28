@@ -74,12 +74,6 @@ service atcmdserver  /vendor/bin/atcmdserver
 service commu_server  /system/vendor/bin/commu_server
     class main
 
-service oeminfo_nvm /sbin/oeminfo_nvm_server
-    class core
-    critical
-    ioprio rt 4
-#    seclabel u:r:oeminfo_nvm:s0
-
 service diagserver /vendor/bin/diagserver
     class main
     user root
