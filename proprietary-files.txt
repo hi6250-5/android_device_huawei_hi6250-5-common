@@ -264,11 +264,13 @@ vendor/lib/libbalong-ril.so|1ae8b9a6a7e2fb074039fd6c7caefeab56c157f1
 vendor/lib/libbalong-ril-1.so|fb3bddfaeaebc3afea13e6a466269440cacf302e
 vendor/lib/libbalong-ril-2.so|46ce302636d894bd4b6542e5d4226ef2f1b0c98e
 vendor/lib/libril.so
+vendor/lib/libril_emui8.so|b35f34b45646f89279c790655bd990fc3d946e00
 vendor/lib/lib_wifi_sar.so
 vendor/lib64/libbalong-ril.so|74ffb72659e801d559d2f0b1dbe6990911836042
 vendor/lib64/libbalong-ril-1.so|dc40d482a9d7a5912aebacbe8ed0f239289532b5
 vendor/lib64/libbalong-ril-2.so|cb4a5a9c1a547a2f3b3a6fa4ac1875038049adeb
 vendor/lib64/libril.so
+vendor/lib64/libril_emui8.so|9163b46ff637322943aed35c7938c9d475952d23
 vendor/lib64/lib_wifi_sar.so
 
 # Sensors - PRA-LX1 8.0.0.410(C432)
