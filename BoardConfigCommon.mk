@@ -79,7 +79,9 @@ BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /vendor/lib/hw/audio.primary.hi6250.so|libshim_audio.so \
     /vendor/lib/hw/audio.primary.hi6250.so|libshim_icu.so \
+    /vendor/lib/soundfx/libhuaweiprocessing.so|libshim_audio.so \
     /vendor/lib/soundfx/libhuaweiprocessing.so|libshim_icu.so
 
 # Vendor
