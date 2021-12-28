@@ -57,3 +57,10 @@ LOCAL_SHARED_LIBRARIES := libutils libhwui libskia libui libandroidfw
 LOCAL_MODULE := libshim_renderer
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := exif_shim.cpp
+LOCAL_SHARED_LIBRARIES := libexif
+LOCAL_MODULE := libshim_exif
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_SHARED_LIBRARY)

@@ -220,7 +220,8 @@ PRODUCT_PACKAGES += \
     libshim_memtrack \
     libshim_renderer \
     libshim_sensors \
-    libshim_ui
+    libshim_ui \
+    libshim_exif
 
 # Thermal
 PRODUCT_PACKAGES += \
