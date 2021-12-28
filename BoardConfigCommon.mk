@@ -99,11 +99,13 @@ TARGET_LD_SHIM_LIBS := \
     /vendor/bin/HwCamCfgSvr|libshim_memtrack.so \
     /vendor/lib/hw/audio.primary.hi6250.so|libshim_audio.so \
     /vendor/lib/hw/audio.primary.hi6250.so|libshim_icu.so \
+    /vendor/lib/hw/fingerprint.hi6250.so|libshim_log.so \
     /vendor/lib/soundfx/libhuaweiprocessing.so|libshim_audio.so \
     /vendor/lib/soundfx/libhuaweiprocessing.so|libshim_icu.so \
     /vendor/lib/libgnss_sensors_hisi.so|libshim_sensors.so \
     /vendor/lib/libhwuibp.so|libshim_renderer.so \
     /vendor/lib/libimonitor.so|libshim_log.so \
+    /vendor/lib64/hw/fingerprint.hi6250.so|libshim_log.so \
     /vendor/lib64/libgnss_sensors_hisi.so|libshim_sensors.so \
     /vendor/lib64/libhwuibp.so|libshim_renderer.so \
     /vendor/lib64/libimonitor.so|libshim_log.so
