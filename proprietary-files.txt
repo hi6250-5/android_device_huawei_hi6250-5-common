@@ -275,11 +275,12 @@ vendor/lib64/lib_wifi_sar.so
 vendor/lib/hw/sensors.hi6250.so|d249d04e8279e7274a7190725bf786141c5d59b1
 vendor/lib64/hw/sensors.hi6250.so|a8c5c34e76c1f1c4ab338910e5b38b886cc9a73e
 
-# Tee - PRA-LX1 8.0.0.410(C432)
-vendor/bin/teecd|e2111b2972f2b7c509dbc70e93a63441f4db076f
--vendor/etc/native_packages.xml|042108b168352dd14d8fc51663e3e8c044b91536
-vendor/lib/libteec.so|14c772a0d324e2b184016cd47e9541c285002dbd
-vendor/lib64/libteec.so|4c2283125bb6594106c665261489e6d8f8b1e907
+# Tee
+# teecd imported from /sbin/teecd
+vendor/bin/teecd|fc04c77c1e8fc7d33cf3ef7b3850b4e244309de1
+-vendor/etc/native_packages.xml
+vendor/lib/libteec.so
+vendor/lib64/libteec.so
 
 # Thermal - PRA-LX1 8.0.0.410(C432)
 vendor/lib/hw/thermal.hi6250.so|b780399d64ac0b50c1b6cc78a5af7f77282f221f
