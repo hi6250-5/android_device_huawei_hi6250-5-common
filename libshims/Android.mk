@@ -64,3 +64,11 @@ LOCAL_SHARED_LIBRARIES := libexif
 LOCAL_MODULE := libshim_exif
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := algo_shim.cpp
+LOCAL_STATIC_LIBRARIES := libgcc
+LOCAL_SHARED_LIBRARIES := libm
+LOCAL_MODULE := libshim_algo
+LOCAL_VENDOR_MODULE := true
+include $(BUILD_SHARED_LIBRARY)

@@ -214,6 +214,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libshim_algo \
     libshim_audio \
     libshim_icu \
     libshim_log \
