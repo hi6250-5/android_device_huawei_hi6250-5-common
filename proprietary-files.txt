@@ -34,10 +34,12 @@ vendor/bin/HwCamCfgSvr
 vendor/lib/hw/camera.hi6250.so
 vendor/lib/hwcam/hwcam.ddt.so
 vendor/lib/libHWCamCfgSvr.so
+vendor/lib/libcamera_algo.so
 vendor/lib/libcamera_metadata.so
 vendor/lib64/hw/camera.hi6250.so
 vendor/lib64/hwcam/hwcam.ddt.so
 vendor/lib64/libHWCamCfgSvr.so
+vendor/lib64/libcamera_algo.so
 vendor/lib64/libcamera_metadata.so
 
 # Connectivity
