@@ -102,6 +102,7 @@ TARGET_LD_SHIM_LIBS := \
     /vendor/lib/hw/fingerprint.hi6250.so|libshim_log.so \
     /vendor/lib/soundfx/libhuaweiprocessing.so|libshim_audio.so \
     /vendor/lib/soundfx/libhuaweiprocessing.so|libshim_icu.so \
+    /vendor/lib/libbalong-ril.so|libril_emui5.so \
     /vendor/lib/libcamera_algo.so|libsensor.so \
     /vendor/lib/libcamera_algo.so|libshim_algo.so \
     /vendor/lib/libcamera_algo.so|libshim_memtrack.so \
@@ -110,6 +111,7 @@ TARGET_LD_SHIM_LIBS := \
     /vendor/lib/libhwuibp.so|libshim_renderer.so \
     /vendor/lib/libimonitor.so|libshim_log.so \
     /vendor/lib64/hw/fingerprint.hi6250.so|libshim_log.so \
+    /vendor/lib64/libbalong-ril.so|libril_emui5.so \
     /vendor/lib64/libcamera_algo.so|libsensor.so \
     /vendor/lib64/libcamera_algo.so|libshim_algo.so \
     /vendor/lib64/libcamera_algo.so|libshim_memtrack.so \
