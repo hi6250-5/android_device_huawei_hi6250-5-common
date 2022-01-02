@@ -136,10 +136,6 @@ vendor/lib64/hw/fm.bcm.hi6250.so
 vendor/lib64/hw/fm.hisi.hi6250.so
 vendor/lib64/libfm_interface.so
 
-# Gatekeeper - PRA-LX1 8.0.0.410(C432)
-vendor/lib/hw/gatekeeper.hi6250.so|251a7a3811cfadd5bc2d1e99417d65d903ae31bd
-vendor/lib64/hw/gatekeeper.hi6250.so|842b8172551108eb93846f47ca6a28e85652e525
-
 # GPS
 lib/libgabi++.so:vendor/lib/libgabi++.so
 lib64/libgabi++.so:vendor/lib64/libgabi++.so
@@ -186,12 +182,6 @@ vendor/lib64/libhiion.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libOpenCLFoundation.so
 vendor/lib64/libSR_opencl.so
-
-# Keystore - PRA-LX1 8.0.0.410(C432)
-vendor/lib/hw/keystore.hi6250.so|3f515c530cf3697ed37b68ef7f76dc61c233682e
-vendor/lib/libxcollie.so|a6164a82ae2ff9bcb9f8cec5d4b26dc0b397246a
-vendor/lib64/hw/keystore.hi6250.so|68343a650d7f82466cf2e2739492caab43809f4c
-vendor/lib64/libxcollie.so|1bd81dcb27f87819174860af7cef6f895a3e99d6
 
 # Memtrack
 vendor/lib/hw/memtrack.hi6250.so
