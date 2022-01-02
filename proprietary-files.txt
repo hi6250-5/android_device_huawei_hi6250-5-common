@@ -251,21 +251,21 @@ vendor/lib64/libperfhub.so
 vendor/lib64/libperfhub_service.so
 
 # RIL - PRA-LX1 8.0.0.410(C432)
-vendor/bin/rild:vendor/bin/hw/rild
+vendor/bin/hw/rild|ac882157e85b036ff94b472ac50fb665d404b463
 vendor/lib/libbalong-ril.so|1ae8b9a6a7e2fb074039fd6c7caefeab56c157f1
 vendor/lib/libbalong-ril-1.so|fb3bddfaeaebc3afea13e6a466269440cacf302e
 vendor/lib/libbalong-ril-2.so|46ce302636d894bd4b6542e5d4226ef2f1b0c98e
-vendor/lib/libril.so
-vendor/lib/libril_emui8.so|b35f34b45646f89279c790655bd990fc3d946e00
-vendor/lib/lib_wifi_sar.so
+vendor/lib/libril.so|b35f34b45646f89279c790655bd990fc3d946e00
+vendor/lib/libril.so:vendor/lib/libril_emui5.so
+vendor/lib/lib_wifi_sar.so|91781d440ae4dcd112bf77efe8f5f269704914fc
 vendor/lib/vendor.huawei.hardware.radio@1.0.so|d6a09f7ed5995eb68a87c72eedb7a880d7f739fb
 vendor/lib/vendor.huawei.hardware.radio@1.1.so|3ea6a377a805029323cce56b4ca1ef6afc96480a
 vendor/lib64/libbalong-ril.so|74ffb72659e801d559d2f0b1dbe6990911836042
 vendor/lib64/libbalong-ril-1.so|dc40d482a9d7a5912aebacbe8ed0f239289532b5
 vendor/lib64/libbalong-ril-2.so|cb4a5a9c1a547a2f3b3a6fa4ac1875038049adeb
-vendor/lib64/libril.so
-vendor/lib64/libril_emui8.so|9163b46ff637322943aed35c7938c9d475952d23
-vendor/lib64/lib_wifi_sar.so
+vendor/lib64/libril.so|9163b46ff637322943aed35c7938c9d475952d23
+vendor/lib64/libril.so:vendor/lib64/libril_emui5.so
+vendor/lib64/lib_wifi_sar.so|f1c9c3c36c783d0a7cf8f48c662acaa1e9df46c9
 vendor/lib64/vendor.huawei.hardware.radio@1.0.so|7b40c6bd2e7fb240324f152b18fda2b16e2ab4b6
 vendor/lib64/vendor.huawei.hardware.radio@1.1.so|86e48cf030bc6b907fda72648f5cc06430c27044
 

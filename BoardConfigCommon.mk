@@ -109,7 +109,6 @@ TARGET_LD_SHIM_LIBS := \
     /vendor/lib/libgnss_sensors_hisi.so|libshim_sensors.so \
     /vendor/lib/libhwuibp.so|libshim_renderer.so \
     /vendor/lib/libimonitor.so|libshim_log.so \
-    /vendor/lib/libril.so|libril_emui8.so \
     /vendor/lib64/hw/fingerprint.hi6250.so|libshim_log.so \
     /vendor/lib64/libcamera_algo.so|libsensor.so \
     /vendor/lib64/libcamera_algo.so|libshim_algo.so \
@@ -117,8 +116,7 @@ TARGET_LD_SHIM_LIBS := \
     /vendor/lib64/libcamera_algo.so|libshim_ui.so \
     /vendor/lib64/libgnss_sensors_hisi.so|libshim_sensors.so \
     /vendor/lib64/libhwuibp.so|libshim_renderer.so \
-    /vendor/lib64/libimonitor.so|libshim_log.so \
-    /vendor/lib64/libril.so|libril_emui8.so
+    /vendor/lib64/libimonitor.so|libshim_log.so
 
 # Vendor
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
