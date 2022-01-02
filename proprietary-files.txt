@@ -273,12 +273,11 @@ vendor/lib64/vendor.huawei.hardware.radio@1.1.so|86e48cf030bc6b907fda72648f5cc06
 vendor/lib/hw/sensors.hi6250.so|d249d04e8279e7274a7190725bf786141c5d59b1
 vendor/lib64/hw/sensors.hi6250.so|a8c5c34e76c1f1c4ab338910e5b38b886cc9a73e
 
-# Tee
-# teecd imported from /sbin/teecd
-vendor/bin/teecd|fc04c77c1e8fc7d33cf3ef7b3850b4e244309de1
+# Tee - patched to ignore missing packages
+vendor/bin/teecd|218059840604307d642a2eb8ba4aacfae03efd70
 -vendor/etc/native_packages.xml
-vendor/lib/libteec.so
-vendor/lib64/libteec.so
+vendor/lib/libteec.so|b476bd6c6b3be8dde1ac09fc9296246df5956920
+vendor/lib64/libteec.so|8fc16ee35cd9afd2b59c012e15040f2f905d3aa4
 
 # Thermal - PRA-LX1 8.0.0.410(C432)
 vendor/lib/hw/thermal.hi6250.so|b780399d64ac0b50c1b6cc78a5af7f77282f221f
